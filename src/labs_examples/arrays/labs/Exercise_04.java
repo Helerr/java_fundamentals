@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.ArrayList;
+
 /**
  *  Irregular Arrays
  *
@@ -9,5 +11,18 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        int[][] ints = new int[][]{{1,2,3},{2,3,4,5},{5,4,3,2,1},{1,2}};
+
+        for (int[] intArray: ints ) {
+            for (int number: intArray) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
+
 
 }
