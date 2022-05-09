@@ -24,6 +24,8 @@ public class Exercise_05 {
         // for example, replace(), substring(), contains(), indexOf() etc
         char e = str.charAt(1);
         boolean contains = str.contains("ll");
+        double d= 123.45;
+        float fl = (float) d;
     }
 
 

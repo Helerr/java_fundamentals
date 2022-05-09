@@ -17,7 +17,12 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
-
+        int myIntValue = 10;
+        double myDoubleValue = 20;
+        char myCharValue = 'a';
+        System.out.println(myCharValue);
+        System.out.println(myDoubleValue);
+        System.out.println(myIntValue);
     }
 }
 
