@@ -10,12 +10,20 @@ package labs_examples.objects_classes_methods.labs.methods;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-//        int x = factorial(5);
-//        System.out.println(x);
+        int x = factorial(5);
+        System.out.println(x);
 //        should print 120
     }
 
+    public static int factorial(int n){
+        int total;
 
+        if(n == 1){
+            return 1;
+        }
+        total = n * factorial(n-1);
+        return total;
+    }
 
 
 }
