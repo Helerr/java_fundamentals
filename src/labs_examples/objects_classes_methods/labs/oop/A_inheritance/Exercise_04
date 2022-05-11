@@ -1,6 +1,7 @@
 
 Without running the code below, please tell me what it will print.
-
+"Child called" because doSomething() exists in both classes and because we are instantiating c as a Child() object, it will
+look at the override Child doSomething() method.
 
 
 public class InheritanceTest

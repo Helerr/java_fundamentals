@@ -3,7 +3,9 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: it prints in order A -> B -> C and that is because the parent class needs to be instantiated
+ * before the child class can exist. Because C extends B and B extends A, when C is instantiated B needs to be created
+ * and before B can be created, its parent A needs to exist.
  *
  */
 

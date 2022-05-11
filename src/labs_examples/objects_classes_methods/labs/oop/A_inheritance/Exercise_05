@@ -1,6 +1,6 @@
 
 Without running the code below, please tell me what will print. Why?
-
+"Parent called" and then "Child called" on the next line because the parent class needs to be created before the child class gets created.
 
 
 
