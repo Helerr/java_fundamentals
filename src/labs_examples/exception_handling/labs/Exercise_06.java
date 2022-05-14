@@ -7,3 +7,12 @@ package labs_examples.exception_handling.labs;
  *
  */
 
+class Driving{
+    public static int numberAtIndex(int[] nums, int index) throws ArrayIndexOutOfBoundsException{
+        if(nums.length - 1 > index || index < 0){
+            throw new ArrayIndexOutOfBoundsException();
+        } else {
+            return nums[index];
+        }
+    }
+}
