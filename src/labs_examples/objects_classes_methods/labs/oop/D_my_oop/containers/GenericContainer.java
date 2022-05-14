@@ -26,7 +26,7 @@ public abstract class GenericContainer implements IBag {
     public void put(IBag bagOfSurprises) {
         GenericContainer tempStorage = (GenericContainer) bagOfSurprises;
         this.surprisesContainer.addAll(tempStorage.getSurprisesContainer());
-        tempStorage.getSurprisesContainer().clear();
+        ((GenericContainer) bagOfSurprises).getSurprisesContainer().clear();
     }
 
     @Override

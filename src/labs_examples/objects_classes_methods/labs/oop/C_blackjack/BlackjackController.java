@@ -35,6 +35,7 @@ public class BlackjackController {
                         deck.setUsedCards(new ArrayList<>());
                         deck.setCards(new Card[52]);
                         deck.pupulateDeck();
+                        Player.gamesPlayed++;
                     }
                     runGame();
                     break;
@@ -97,6 +98,7 @@ public class BlackjackController {
                     if (user.getHand().handValueOver()) {
                         System.out.println("You went over 21! Computer wins!");
                         System.out.println("Hand score: " + user.getHand().handScore());
+                        Player.computerWon++;
                         wantsAnotherOne = false;
                         playingHand = false;
                         break outerloop;
@@ -112,6 +114,7 @@ public class BlackjackController {
                     System.out.println("COMPUTER WENT OVER! USER WINS!");
                     System.out.println("Computer hand: " + computer.getHand().getCards().toString());
                     System.out.println("Computer hand score: " + computer.getHand().handScore());
+                    Player.playerWon++;
                     playingHand = false;
                     break outerloop;
                 }
@@ -123,9 +126,11 @@ public class BlackjackController {
             System.out.println("Computer hand score: " + computer.getHand().handScore());
             if (user.getHand().handScore() > computer.getHand().handScore()) {
                 System.out.println(user.getName() + " wins this round with a score of " + user.getHand().handScore());
+                Player.playerWon++;
                 break;
             } else if (user.getHand().handScore() < computer.getHand().handScore()) {
                 System.out.println("Computer wins this round with a score of " + computer.getHand().handScore());
+                Player.computerWon++;
                 break;
             } else {
                 System.out.println("This one ends in a draw.");

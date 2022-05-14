@@ -8,6 +8,6 @@ public class GiveSurpriseAndApplause extends GiveSurprises {
 
     @Override
     protected void giveWithPassion() {
-        System.out.println("👏👏👏👏 👏Applause!Applause!Applause!Applause! 👏👏👏👏👏");
+        System.out.println("👏👏👏👏👏Applause!Applause!Applause!Applause! 👏👏👏👏👏");
     }
 }

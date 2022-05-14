@@ -4,6 +4,9 @@ public class Player {
     private String name;
     private Hand hand;
     private int potValue;
+    public static int playerWon = 0;
+    public static int computerWon = 0;
+    public static int gamesPlayed;
 
     public Player(String name, int potValue) {
         this.name = name;
