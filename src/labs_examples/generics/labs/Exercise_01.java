@@ -8,3 +8,54 @@ package labs_examples.generics.labs;
  *          dynamic usage.
  */
 
+public class Exercise_01 <T extends Number & Comparable<T>, U extends Number & Comparable<U>>{
+    T t;
+    U u;
+
+    public Exercise_01(T t, U u) {
+        this.t = t;
+        this.u = u;
+    }
+
+    public T getT() {
+        return t;
+    }
+
+    public void setT(T t) {
+        this.t = t;
+    }
+
+    public U getU() {
+        return u;
+    }
+
+    public void setU(U u) {
+        this.u = u;
+    }
+
+    @Override
+    public String toString() {
+        return "Exercise_01{" +
+                "t=" + t +
+                ", u=" + u +
+                '}';
+    }
+
+    public double sum(){
+        return this.t.doubleValue() + this.u.doubleValue();
+    }
+    public double produce(){
+        return this.t.doubleValue() + this.u.doubleValue();
+    }
+
+    public static void main(String[] args) {
+        Exercise_01<Integer,Integer> ints = new Exercise_01<>(10,20);
+        System.out.println(ints.sum());
+        System.out.println(ints.produce());
+        Exercise_01<Double, Double> doubles = new Exercise_01<>(10.23, 30.432);
+        System.out.println(doubles.sum());
+        System.out.println(doubles.produce());
+
+    }
+
+}

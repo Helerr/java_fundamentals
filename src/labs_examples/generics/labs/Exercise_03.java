@@ -2,6 +2,7 @@ package labs_examples.generics.labs;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Generics Exercise 3:
@@ -17,3 +18,45 @@ import java.util.Collection;
  *      4) Write a generic method to find the largest element within the range (begin, end) of a list.
  *
  */
+public class Exercise_03 {
+
+    public static <T extends Number> double sum(T number1, T number2){
+        return number1.doubleValue() + number2.doubleValue();
+    }
+
+    public static <T extends Collection<String>> int palindromAmount(T collection){
+        int amount = 0;
+        for (String str: collection) {
+            int length = str.length();
+            String reverse = "";
+            for ( int i = length - 1; i >= 0; i-- )
+                reverse = reverse + str.charAt(i);
+            if (str.equals(reverse))
+               amount++;
+        }
+        return amount;
+    }
+
+    public static <T> ArrayList<T> exchange(ArrayList<T> array,T firstElement, T secondElement){
+        int firstIndex = array.indexOf(firstElement);
+        int secondIndex = array.indexOf(secondElement);
+
+        T temp = array.get(firstIndex);
+
+        array.set(firstIndex,secondElement);
+        array.set(secondIndex, temp);
+
+        return array;
+    }
+
+    public static <T extends Number & Comparable<T>> T largest(List<T> list, int begin, int end){
+        T max = list.get(begin);
+
+        for (int i = begin; i < end; i++) {
+            if (max.compareTo(list.get(i)) < 0){
+                max = list.get(i);
+            }
+        }
+        return max;
+    }
+}
